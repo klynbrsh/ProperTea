@@ -13,6 +13,7 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
 
   <!-- Custom styles for this template -->
   <link href="css/small-business.css" rel="stylesheet">
@@ -84,7 +85,7 @@
     <!-- /.row -->
 
     <!-- Content Row -->
-  <form name="TeaAccount" action="/action_page.php" onsubmit="return validateForm()" method="post">
+  <form id="TeaAccount" action="d:\Documents\GitHub\ProperTea\confirmation.html" onsubmit="return checkForm()" method="post">
     <div class="row">
       <div class="col-md-4 mb-5" id="personal">
         <div class="card h-100">
@@ -92,9 +93,9 @@
             <img src="img/teabag.png" class="icon" style="display:inline; width:25px; height:auto;">
             <h2 class="card-title" style="display:inline;">Personal Information</h2>
             <p class ="card-text"style="display: inline;">First Name</p>
-            <input type="text" class="form-control" id="first" placeholder="" name="first">
+            <input type="text" class="form-control" id="firstn" placeholder="" onClick="document.form1.firstn.focus()">
             <p class ="card-text"style="display: inline;">Last Name</p>
-            <input type="text" class="form-control" id="last" placeholder="" name="last">
+            <input type="text" class="form-control" id="lastn" placeholder="">
             <br>
             <p class="sidenote" style="display:inline; float:right; line-height:0.9;">Why we ask?<i class="fas fa-info-circle" style="display:inline; float:right; font-weight:25px;"></i></p>
           </div>
@@ -109,13 +110,17 @@
           <div class="card-body">
             <img src="img/tea both.png" class="icon" style="display:inline; width:45px; height:auto;">
             <h2 class="card-title" style="display:inline;">Log-In Information</h2>
+
             <p class ="card-text"style="display: inline;">Email</p><p class="required" style="display: inline; color:red;">*</p>
-            <input type="text" class="form-control" id="email" placeholder="" name="email" required>
+            <input type="text" class="form-control" id="email" placeholder="" required>
+           
             <p class ="card-text"style="display: inline;">Password</p><p class="required" style="display: inline; color:red;">*</p>
-            <input type="text" class="form-control" id="pass" placeholder="" name="pass" required>  
+            <input type="text" class="form-control" id="pass" placeholder="" required>  
+           
             <p class ="card-text"style="display: inline;">Confirm Password</p><p class="required" style="display: inline; color:red;">*</p>
-            <input type="text" class="form-control" id="conpass" placeholder="" name="conpass" required>
-            <input type="checkbox" name="Remember" value="Repeat"> Remember Me?<i class="fas fa-info-circle" style="display:inline; font-weight:25px;"></i><br>
+            <input type="text" class="form-control" id="conpass" placeholder="" required>
+            
+            <input type="checkbox" value="Repeat"> Remember Me?<i class="fas fa-info-circle" style="display:inline; font-weight:25px;"></i><br>
          </div>
           <!-- <div class="card-footer">
             <a href="#" class="btn btn-primary btn-sm">More Info</a>
@@ -128,23 +133,23 @@
           <div class="card-body">
             <img src="img/tea cup.png" class="icon" style="display:inline; width:45px; height:auto;">
             <h2 class="card-title" style="display:inline;">Favorite Tea?</h2><br>
-            <input type="checkbox" name="Black Tea" value="Black"> Black Tea<br>
-            <input type="checkbox" name="Green Tea" value="Green"> Green Tea<br>
-            <input type="checkbox" name="Oolong Tea" value="Oolong"> Oolong Tea<br>
-            <input type="checkbox" name="White Tea" value="White"> White Tea<br>
-            <input type="checkbox" name="Dark Tea" value="Dark"> Dark Tea<br>
-            <input type="checkbox" name="Unsure" value="Unsure"> I'm not sure<br>
+            <input type="checkbox" id="Black" value="Black"> Black Tea<br>
+            <input type="checkbox" id="Green" value="Green"> Green Tea<br>
+            <input type="checkbox" id="Oolong" value="Oolong"> Oolong Tea<br>
+            <input type="checkbox" id="White" value="White"> White Tea<br>
+            <input type="checkbox" id="Dark" value="Dark"> Dark Tea<br>
+            <input type="checkbox" id="Unsure" value="Unsure"> I'm not sure<br>
             <p class="sidenote" style="display:inline; float:right; line-height:0.9;">Why we ask?<i class="fas fa-info-circle" style="display:inline; float:right; font-weight:25px;"></i></p>
           </div>
         </div>
       </div>
       <div class="col-md-4 mb-5" id="check">
-        <label style="display:inline;"><input type="checkbox" name="Terms" id="Terms" value="Terms"/> Agree to our <p class="link" style="display: inline; color:blue; text-decoration:underline;">Terms and Services</p></label>
+        <label style="display:inline;"><input type="checkbox" id="Terms" value="Terms"/> Agree to our <p class="link" style="display: inline; color:blue; text-decoration:underline;">Terms and Services</p></label>
        <br>
-        <input type="checkbox" name="Newsletter" id="news" value="News"> Sign up to receive our weekly newsletter
+        <input type="checkbox" id="news" value="News" checked> Sign up to receive our weekly newsletter
       </div>
-      <div class="col-md-4 mb-5" id="submit">
-        <button type="button" name="submit" class="submit">Submit</button>
+      <div class="col-md-4 mb-5" id="submitid">
+        <input type="submit" class="submit1" id="subbutt" value="Submit">
       </div>
 </form>
     </div>

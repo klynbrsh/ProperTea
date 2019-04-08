@@ -34,7 +34,7 @@
   top: 100px;
   left: 125px;
 }
-#personal, #login, #tea, #submit, #check {
+#personal, #login, #tea, #submitid, #check {
     position: absolute;
     right: 125px;
 }
@@ -51,17 +51,17 @@
     border-radius:25px;
     border:0px;
 }
-#submit{
+#submitid{
     top:1025px;
     width:425px;
 }
-#submit button {
+#submitid input {
     width:395px;
     height: 50px;
     border-radius:25px;
     background-color: #e561cd;
 }
-.submit {
+.submit1 {
     color:white;
     font-size: 20pt;
 }
