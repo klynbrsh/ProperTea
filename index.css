@@ -34,7 +34,7 @@
   top: 100px;
   left: 125px;
 }
-#personal, #login, #tea, #submitid, #check {
+#personal, #login, #tea, #submitid, #check, #Con {
     position: absolute;
     right: 125px;
 }

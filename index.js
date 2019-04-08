@@ -1,8 +1,3 @@
-// form1.pass1.value = "";
-//         form1.pass2.value = "";
-//         form1.pass1.focus();
-
-
 function checkForm()
 {
 	var firstn = document.getElementById('firstn').value;
@@ -17,8 +12,8 @@ function checkForm()
     var green = document.getElementById('Green').checked;
     var dark = document.getElementById('Dark').checked;
     var unsure = document.getElementById('Unsure').checked;
-	
-	
+    
+
 	var form_ok = true;
 	
 	var fname_ok = true;
@@ -110,15 +105,7 @@ function checkForm()
     }
     else {
         tea_ok = false
-    }
-// function check() {
-//     document.getElementById("myCheck").checked = true;
-// }
-
-// function uncheck() {
-//     document.getElementById("myCheck").checked = false;
-// }
-        
+    }        
 
     form_ok = (lname_ok && email_ok && pass_ok && fname_ok && terms_ok && tea_ok);
     if (!form_ok)
@@ -137,8 +124,14 @@ function checkForm()
         }
     }
 
-	return form_ok;
+    return form_ok;
+    if (confo.style.display === "none") {
+        confo.style.display = "block";
+      } else {
+        confo.style.display = "none";
+      }
 }
+
 
     
    
